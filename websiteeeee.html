@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Website</title>
+  <style>
+    /* Basic Reset and Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #004a99;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    nav button:hover, nav button.active {
+      background: #0066cc;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>JOSHI GEORGE</header>
+
+  <nav>
+    <button class="active" onclick="showSection('home')">Home</button>
+    <button onclick="showSection('hobbies')">My Hobbies</button>
+    <button onclick="showSection('qualifications')">Qualifications</button>
+    <button onclick="showSection('activities')">Extracurricular</button>
+    <button onclick="showSection('parents')">Parents Details</button>
+    <button onclick="showSection('contact')">Contact Me</button>
+  </nav>
+
+  <main>
+<section id="home">
+ <marquee>
+	<h2>Welcome To My Website </h2>
+	</marquee>
+
+  <p>This is the homepage where you can find basic info about me.</p>
+  
+  <!-- Ronaldo Image and Description -->
+  <div>
+<center>
+    <img src="C:\Users\imba2535\Downloads\joooosshhhh.jpg" alt="Cristiano Ronaldo" style="max-width: 300px; margin-top: 20px; border-radius: 8px;">
+    <p style="margin-top: 10px; font-size: 1rem;">
+<table border="10">
+  <tr>
+	<td> <h4>  "Hi, I'm Joshi George, currently pursuing an IMBA at Rajagiri College of Social Sciences in Kochi. Originally from Trivandrum, I am passionate about football, which is not just a hobby but a way of life for me. When I'm not on the field, you can find me exploring new places, as I love to travel and immerse myself in different cultures. I'm always excited to learn and experience new things, whether it's through my studies, sports, or adventures. Welcome to my personal website!" </h4>
+	</td>
+</tr>
+</table>
+</center>
+    </p>
+  </div>
+</section>
+
+    </section>
+
+    <section id="hobbies" style="display:none;">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>playing football</li>
+        <li>bathing</li>
+        <li>Traveling</li>
+        <li>watching movies</li>
+      </ul>
+    </section>
+
+    <section id="qualifications" style="display:none;">
+      <h2>Qualifications</h2>
+      <ul>
+        <li>Integrated MBA</li>
+        <li>+2 & 10th pass</li>
+        <li>played in state football team</li>
+      </ul>
+    </section>
+
+    <section id="activities" style="display:none;">
+      <h2>Extracurricular Activities</h2>
+      <ul>
+        <li>Member of the sports club</li>
+        <li>Volunteered at kochi lulu mall</li>
+        <li>Organized school Onam fest</li>
+      </ul>
+    </section>
+
+    <section id="parents" style="display:none;">
+      <h2>Parents Details</h2>
+      <p><strong>Father:</strong> George Patric - business</p>
+      <p><strong>Mother:</strong> Sherly Patric - housewife</p>
+    </section>
+
+    <section id="contact" style="display:none;">
+      <h2>Contact Me</h2>
+      <form onsubmit="event.preventDefault(); alert('Thank you for reaching out!');">
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" required/><br/><br/>
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" required/><br/><br/>
+        <label for="message">Message:</label><br/>
+        <textarea id="message" rows="4" required></textarea><br/><br/>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 JOSHI GEORGE. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('main section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+
+      // Show selected section
+      document.getElementById(sectionId).style.display = 'block';
+
+      // Update active button style
+      document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
