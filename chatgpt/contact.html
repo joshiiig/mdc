@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Master Page -->
+    <header>
+        <div class="logo">
+            <h1>Your Name</h1>
+            <p>Your Tagline or Profession</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="qualifications.html">Qualifications</a></li>
+            <li><a href="extracurricular.html">Extra-curricular</a></li>
+            <li><a href="parents.html">Parents</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="content">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
